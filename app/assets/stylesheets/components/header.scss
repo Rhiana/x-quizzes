@@ -1,0 +1,24 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: $brand-pink;
+  color: $white;
+  @include mobile {
+    padding: 5px 10px;
+  }
+  &__brand {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: currentColor;
+    &:focus, &:hover {
+      text-decoration: underline;
+    }
+  }
+}
