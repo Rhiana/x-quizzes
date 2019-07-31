@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :quizzes
+  resources :quizzes, only: %i[index show]
 
   root "quizzes#index"
 end
