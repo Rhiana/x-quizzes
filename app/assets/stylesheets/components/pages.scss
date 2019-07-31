@@ -1,0 +1,17 @@
+.page {
+  min-height: calc(100vh - 60px);
+  padding-top: 60px;
+  &__content {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+    @include mobile {
+      width: 95%;
+    }
+  }
+  &__header {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid $white;
+  }
+}
