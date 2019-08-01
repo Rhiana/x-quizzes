@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 <section class="page">
-  <article class="page__content">
+  <article class="page__content three-cols">
     <header class="page__header">
       <h1>All Quizzes</h1>
     </header>
 
     <% @quizzes.each do |quiz| %>
       <div class="card">
-        <%= quiz.name %>
-        <%= quiz.score %>
-        <%= link_to 'Start', quiz %>
+        <h2 class="card__title"><%= quiz["title"] %></h2>
+        <p>
+          <strong>Number of questions:</strong> <%= quiz["question_ids"].count %>
+        </p>
+        <%= link_to 'Start', quiz, class: "button green" %>
       </div>
     <% end %>
   </article>

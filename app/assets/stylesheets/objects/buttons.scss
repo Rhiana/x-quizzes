@@ -1,0 +1,27 @@
+.button {
+  height: 40px;
+  line-height: 34px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 3px;
+  border: 3px solid currentColor;
+  text-align: center;
+  padding: 0px 20px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  color: $white;
+  @include mobile {
+    padding: 0 15px;
+  }
+  &.green {
+    background-color: $green;
+    border-color: $green;
+    &:hover, &:focus {
+      background-color: $white;
+      color: $green;
+    }
+  }
+}
