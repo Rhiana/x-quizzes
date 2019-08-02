@@ -7,14 +7,5 @@
       <h1>All Quizzes</h1>
     </header>
 
-    <% @quizzes.each do |quiz| %>
-      <div class="card">
-        <h2 class="card__title"><%= quiz["title"] %></h2>
-        <p>
-          <strong>Number of questions:</strong> <%= quiz["question_ids"].count %>
-        </p>
-        <%= link_to 'Start', quiz, class: "button green" %>
-      </div>
-    <% end %>
   </article>
 </section>
