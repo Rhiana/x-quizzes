@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'bundler'
+
 # Adding the json gem to parse JSON data
 gem 'json', '~> 1.8', '>= 1.8.3'
 
