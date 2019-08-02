@@ -1,0 +1,21 @@
+.page {
+  min-height: calc(100vh - 60px);
+  padding-top: 60px;
+}
+
+.content {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid var(--white);
+}
