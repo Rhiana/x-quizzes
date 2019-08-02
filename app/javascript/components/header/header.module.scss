@@ -1,17 +1,10 @@
-.mainHeader {
+.pink {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 60px;
-  background-color: $brand-pink;
-  color: $white;
-  @include mobile {
-    padding: 5px 10px;
-  }
-  &__brand {
-    display: flex;
-    align-items: center;
-  }
+  background-color: var(--brand-pink);
+  color: var(--white);
   a {
     font-weight: bold;
     font-size: 1.2em;
@@ -21,4 +14,9 @@
       text-decoration: underline;
     }
   }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
 }

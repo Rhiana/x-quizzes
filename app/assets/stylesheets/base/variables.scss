@@ -14,3 +14,10 @@ $card-foreground: $dark-grey-blue;
 
 // Fonts
 $body-font: 'Open Sans', sans-serif;
+
+// CSS Variables used in CSS modules
+
+:root {
+  --brand-pink: #{$brand-pink};
+  --white: #{$white};
+}
