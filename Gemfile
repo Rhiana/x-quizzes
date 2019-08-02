@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Adding the json gem to parse JSON data
 gem 'json', '~> 1.8', '>= 1.8.3'
 
+# Adding webpacker for React
+gem 'webpacker', '~> 4.x'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
