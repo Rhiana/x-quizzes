@@ -1,22 +1,26 @@
 import React from "react";
 import Card from "../../components/card/card";
 
-import quizzes from './quizzes.module.scss'
+import quizzes from './data'
+import styles from './quizzes.module.scss'
 
 class Quizzes extends React.Component {
   render() {
+    const quizzesData = quizzes.quizzes;
+
     return (
-      <section className={quizzes.page}>
-        <article className={quizzes.content}>
-          <header className={quizzes.header}>
+      <section className={styles.page}>
+        <article className={styles.content}>
+          <header className={styles.header}>
             <h1>All Quizzes</h1>
           </header>
 
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          { quizzesData.map((quiz, key) =>
+              <Card
+                quizzTitle={quiz.title}
+                key={quiz.id}
+                questionCount={quiz.question_ids.length}/>
+          )}
         </article>
       </section>
     );

@@ -6,11 +6,10 @@ class Card extends React.Component {
     return (
       <div className={card.content}>
         <h2 className={card.title}>
-          Quiz 1
+          {this.props.quizzTitle}
         </h2>
-        <p>
-          <strong>Number of questions:</strong>
-           2
+        <p className={card.number}>
+          <strong>Number of questions:</strong> {this.props.questionCount}
         </p>
         <a href="/" className="button green">Start</a>
       </div>

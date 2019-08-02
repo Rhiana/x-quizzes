@@ -4,7 +4,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes
   # GET /quizzes.json
   def index
-    @quizzes = Quiz.quizzes_list["quizzes"]
+    @quizzes = Quiz.all
   end
 
   # GET /quizzes/1
