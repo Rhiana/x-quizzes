@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="28px" viewBox="0 0 30 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Quiz-Page" transform="translate(-481.000000, -736.000000)" fill-rule="nonzero">
+            <g id="Card" transform="translate(438.000000, 563.000000)">
+                <g id="Group" transform="translate(45.000000, 175.000000)">
+                    <g id="Group-2">
+                        <ellipse id="Oval" stroke="#BA628C" stroke-width="4" fill="#F8F9F6" cx="13" cy="12" rx="13" ry="12"></ellipse>
+                        <circle id="Oval-2" fill="#BA628C" cx="13" cy="12" r="6"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

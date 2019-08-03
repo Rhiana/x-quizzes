@@ -16,6 +16,10 @@ $card-foreground: $dark-grey-blue;
 // Fonts
 $body-font: 'Open Sans', sans-serif;
 
+// Images
+$radio-unchecked:  image-url('pink-empty-circle.svg');
+$radio-checked:    image-url('pink-filled-circle.svg');
+
 // CSS Variables used in CSS modules
 
 :root {
