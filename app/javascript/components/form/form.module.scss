@@ -3,9 +3,6 @@
   color: var(--dark-grey-blue);
   border-radius: 10px;
   padding: 15px;
-  a, button {
-    margin-right: 15px;
-  }
 }
 
 .fieldset {
@@ -25,4 +22,11 @@
 .label {
   margin-left: 0.5em;
   cursor: pointer;
+}
+
+.buttons {
+  text-align: right;
+  a, button {
+    margin: 0 15px;
+  }
 }

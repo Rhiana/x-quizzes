@@ -36,10 +36,12 @@ class Form extends React.Component {
               })}
             </fieldset>
         })}
-        <Link to="/" className="button orange">
-          Back
-        </Link>
-        <button type="submit" className="button green">Save</button>
+        <div className={styles.buttons}>
+          <Link to="/" className="button orange">
+            Back
+          </Link>
+          <button type="submit" className="button green">Save</button>
+        </div>
       </form>
     );
   }
