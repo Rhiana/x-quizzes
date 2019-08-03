@@ -17,8 +17,9 @@ class Quizzes extends React.Component {
 
           { quizzesData.map((quiz, key) =>
               <Card
-                quizzTitle={quiz.title}
                 key={quiz.id}
+                quizzTitle={quiz.title}
+                quizzLink={quiz.id}
                 questionCount={quiz.question_ids.length}/>
           )}
         </article>

@@ -12,7 +12,7 @@ const routes = [
     component: () => <Quizzes />
   },
   {
-    path: "/quizzes/1",
+    path: "/quizzes/",
     component: () => <Questions />
   }
 ];

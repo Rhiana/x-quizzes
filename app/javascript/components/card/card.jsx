@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import card from './card.module.scss'
 
 class Card extends React.Component {
   render() {
+    const quizzesLink = this.props.quizzLink;
+
     return (
       <div className={card.content}>
         <h2 className={card.title}>
@@ -11,7 +15,9 @@ class Card extends React.Component {
         <p className={card.number}>
           <strong>Number of questions:</strong> {this.props.questionCount}
         </p>
-        <a href="/" className="button green">Start</a>
+        <Link to={"/quizzes/" + quizzesLink} className="button green">
+          Start
+        </Link>
       </div>
     );
   }

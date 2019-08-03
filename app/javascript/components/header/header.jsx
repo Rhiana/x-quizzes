@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import logo from './logo.png'
 import header from './header.module.scss'
 
@@ -6,11 +8,11 @@ class Header extends React.Component {
   render() {
     return (
       <header className={header.pink}>
-        <a href="/" className={header.brand}>
+        <Link to="/" className={header.brand}>
           <img src={logo} alt="" height="40" />
           <span>Company X</span>
-        </a>
-        <a href="/">All Quizzes</a>
+        </Link>
+        <Link to="/">All Quizzes</Link>
       </header>
     );
   }
