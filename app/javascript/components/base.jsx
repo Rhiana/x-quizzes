@@ -12,8 +12,8 @@ const routes = [
     component: () => <Quizzes />
   },
   {
-    path: "/quizzes/",
-    component: () => <Questions />
+    path: "/quizzes/:id",
+    component: Questions
   }
 ];
 

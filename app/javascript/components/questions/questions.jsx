@@ -1,12 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import questions from './data'
-import styles from './questions.module.scss'
+import quizzes from './../quizzes/data';
+import questions from './data';
+import styles from './questions.module.scss';
 
 class Questions extends React.Component {
   render() {
+    let quizId = this.props.match.params.id;
+
     return (
-      <h1>Question 1</h1>
+
+      <h1>Quiz {quizId}</h1>
     );
   }
 }
