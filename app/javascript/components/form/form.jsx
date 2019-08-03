@@ -20,19 +20,26 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
-          { this.props.questionList.map((questionID, key) => {
-            const thisQuestion = this.findQuestion(questionID);
+      <form className={styles.form}>
+        { this.props.questionList.map((questionID, key) => {
+          const thisQuestion = this.findQuestion(questionID);
 
-            return <fieldset
-              key={questionID}>
-                <legend>{thisQuestion.question}</legend>
-                {thisQuestion.answers}
-              </fieldset>
-          })}
+          return <fieldset className={styles.fieldset}
+            key={questionID}>
+              <legend className={styles.legend}>{thisQuestion.question}</legend>
+
+              { thisQuestion.answers.map((answer, key) => {
+                return <div className={styles.group}>
+                  <input type="radio" id={questionID + "-" + key} name={questionID}/>
+                  <label className={styles.label} for={questionID + "-" + key}>{answer}</label>
+                </div>
+              })}
+            </fieldset>
+        })}
         <Link to="/" className="button orange">
           Back
         </Link>
+        <button type="submit" className="button green">Save</button>
       </form>
     );
   }
