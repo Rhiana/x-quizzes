@@ -6,16 +6,28 @@ import questions from './data';
 import styles from './questions.module.scss';
 
 class Questions extends React.Component {
+  findQuiz = (quizID) => {
+    const quizzesData = quizzes.quizzes;
+    var quiz;
+
+    for (quiz of quizzesData) {
+      if (quiz.id == quizID) {
+        return quiz
+      }
+    }
+  }
+
   render() {
-    let quizId = this.props.match.params.id;
+    const quizId       = this.props.match.params.id;
+    const thisQuiz     = this.findQuiz(quizId);
 
     return (
       <section className={styles.page}>
         <article className={styles.content}>
           <header className={styles.header}>
+            <h1>{thisQuiz.title}</h1>
           </header>
 
-      <h1>Quiz {quizId}</h1>
         </article>
       </section>
     );
