@@ -17,9 +17,22 @@ class Questions extends React.Component {
     }
   }
 
+  findQuestion = (questionID) => {
+    const questionData = questions.questions;
+    var question;
+
+    for (question of questionData) {
+      if (question.id == questionID) {
+        return question
+      }
+    }
+  }
+
+
   render() {
     const quizId       = this.props.match.params.id;
     const thisQuiz     = this.findQuiz(quizId);
+    const questionList = thisQuiz.question_ids;
 
     return (
       <section className={styles.page}>
@@ -28,6 +41,15 @@ class Questions extends React.Component {
             <h1>{thisQuiz.title}</h1>
           </header>
 
+          { questionList.map((questionID, key) => {
+            const thisQuestion = this.findQuestion(questionID);
+
+            return <div
+              key={questionID}>
+                <h2>{thisQuestion.question}</h2>
+                {thisQuestion.answers}
+              </div>
+          })}
         </article>
       </section>
     );
