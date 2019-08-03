@@ -10,8 +10,14 @@ class Questions extends React.Component {
     let quizId = this.props.match.params.id;
 
     return (
+      <section className={styles.page}>
+        <article className={styles.content}>
+          <header className={styles.header}>
+          </header>
 
       <h1>Quiz {quizId}</h1>
+        </article>
+      </section>
     );
   }
 }
