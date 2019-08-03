@@ -24,4 +24,12 @@
       color: $green;
     }
   }
+  &.orange {
+    background-color: $orange;
+    border-color: $orange;
+    &:hover, &:focus {
+      background-color: $white;
+      color: $orange;
+    }
+  }
 }

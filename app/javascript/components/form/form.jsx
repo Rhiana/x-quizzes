@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import questions from './../questions/data';
 import styles from './form.module.scss';
@@ -29,6 +30,9 @@ class Form extends React.Component {
                 {thisQuestion.answers}
               </fieldset>
           })}
+        <Link to="/" className="button orange">
+          Back
+        </Link>
       </form>
     );
   }
