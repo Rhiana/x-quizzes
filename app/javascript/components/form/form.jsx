@@ -17,6 +17,18 @@ class Form extends React.Component {
     }
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: 1
+    };
+  }
+
+  handleOptionChange = changeEvent => {
+    this.setState({
+      selectedOption: changeEvent.target.value
+    });
+  };
 
   render() {
     return (
@@ -37,6 +49,9 @@ class Form extends React.Component {
                   <input type="radio"
                          id={inputID}
                          name={"question-" + questionID}
+                         value={answer}
+                         checked={this.state.selectedOption === answer}
+                         onChange={this.handleOptionChange}
                          />
                   <label className={styles.label}
                          htmlFor={inputID}>
