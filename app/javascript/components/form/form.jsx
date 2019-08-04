@@ -20,19 +20,32 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: 1
+      selectedOption1: 1,
+      selectedOption2: 1,
+      selectedOption3: 1,
+      selectedOption4: 1,
+      selectedOption5: 1
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleOptionChange = changeEvent => {
-    this.setState({
-      selectedOption: changeEvent.target.value
-    });
+  handleChange (evt) {
+    this.setState({ [evt.target.name]: evt.target.value });
+  }
+
+  handleFormSubmit = formSubmitEvent => {
+    formSubmitEvent.preventDefault();
+
+    console.log("Question 1:", this.state.selectedOption1);
+    console.log("Question 2:", this.state.selectedOption2);
+    console.log("Question 3:", this.state.selectedOption3);
+    console.log("Question 4:", this.state.selectedOption4);
+    console.log("Question 5:", this.state.selectedOption5);
   };
 
   render() {
     return (
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={this.handleFormSubmit}>
         { this.props.questionList.map((questionID, key) => {
           const thisQuestion = this.findQuestion(questionID);
 
@@ -48,10 +61,9 @@ class Form extends React.Component {
                             key={key}>
                   <input type="radio"
                          id={inputID}
-                         name={"question-" + questionID}
+                         name={"selectedOption" + questionID}
                          value={answer}
-                         checked={this.state.selectedOption === answer}
-                         onChange={this.handleOptionChange}
+                         onChange={this.handleChange}
                          />
                   <label className={styles.label}
                          htmlFor={inputID}>
