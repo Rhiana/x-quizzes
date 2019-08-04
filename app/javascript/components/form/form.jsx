@@ -29,9 +29,19 @@ class Form extends React.Component {
               <legend className={styles.legend}>{thisQuestion.question}</legend>
 
               { thisQuestion.answers.map((answer, key) => {
-                return <div className={styles.group}>
-                  <input type="radio" id={questionID + "-" + key} name={questionID}/>
-                  <label className={styles.label} for={questionID + "-" + key}>{answer}</label>
+                const qNumber = key + 1
+                const inputID = "question-" + questionID + "-" + qNumber
+
+                return <div className={styles.group}
+                            key={key}>
+                  <input type="radio"
+                         id={inputID}
+                         name={"question-" + questionID}
+                         />
+                  <label className={styles.label}
+                         htmlFor={inputID}>
+                         {answer}
+                  </label>
                 </div>
               })}
             </fieldset>
