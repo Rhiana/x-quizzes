@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import questions from './../questions/data';
 import styles from './form.module.scss';
@@ -44,9 +44,11 @@ class Form extends React.Component {
       this.state.selectedOption5
     ]
     this.props.onQuizSubmit(savedAnswers);
+    this.props.history.push('/');
   };
 
   render() {
+
     return (
       <form className={styles.form} onSubmit={this.handleFormSubmit}>
         { this.props.questionList.map((questionID, key) => {
@@ -87,4 +89,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default withRouter(Form);
