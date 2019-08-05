@@ -6,7 +6,9 @@ import styles from './quizzes.module.scss'
 
 class Quizzes extends React.Component {
   render() {
-    const quizzesData = quizzes.quizzes;
+    const quizzesData    = quizzes.quizzes;
+    const currentAnswers = this.props.answers;
+    const completedQuiz  = currentAnswers.length;
 
     return (
       <section className={styles.page}>
@@ -20,7 +22,9 @@ class Quizzes extends React.Component {
                 key={quiz.id}
                 quizzTitle={quiz.title}
                 quizzLink={quiz.id}
-                questionCount={quiz.question_ids.length}/>
+                questionCount={quiz.question_ids.length}
+                currentAnswers={currentAnswers[key]}
+                isCurrentQuiz={completedQuiz == key}/>
           )}
         </article>
       </section>

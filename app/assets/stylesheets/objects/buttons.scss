@@ -32,4 +32,9 @@
       color: $orange;
     }
   }
+  &.grey, &:disabled {
+    background-color: $grey;
+    border-color: $grey;
+    cursor: default;
+  }
 }

@@ -5,20 +5,29 @@ import Header from "../components/header/header";
 import Quizzes from "../components/quizzes/quizzes";
 import Questions from "../components/questions/questions";
 
-const routes = [
-  {
-    path: "/",
-    exact: true,
-    component: () => <Quizzes />
-  },
-  {
-    path: "/quizzes/:id",
-    component: Questions
-  }
-];
-
 class Base extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      answers: []
+    }
+  }
+
   render() {
+    const routes = [
+      {
+        path: "/",
+        exact: true,
+        component: () => <Quizzes
+          answers={this.state.answers}
+        />
+      },
+      {
+        path: "/quizzes/:id",
+        component: Questions
+      }
+    ];
+
     return (
       <section>
         <Router>
