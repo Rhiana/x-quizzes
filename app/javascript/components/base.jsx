@@ -13,6 +13,13 @@ class Base extends React.Component {
     }
   }
 
+  onQuizSubmit = (savedAnswers) => {
+    console.log(savedAnswers)
+    const currentAnswers = this.state.answers;
+
+    this.setState({answers: [...currentAnswers, savedAnswers]})
+  }
+
   render() {
     const routes = [
       {
@@ -24,7 +31,10 @@ class Base extends React.Component {
       },
       {
         path: "/quizzes/:id",
-        component: Questions
+        component: (props) => <Questions
+          onQuizSubmit={this.onQuizSubmit}
+          match={props.match}
+        />
       }
     ];
 

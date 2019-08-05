@@ -31,7 +31,8 @@ class Questions extends React.Component {
           </header>
 
           <Form
-            questionList={questionList}>
+            questionList={questionList}
+            onQuizSubmit={this.props.onQuizSubmit}>
           </Form>
         </article>
       </section>

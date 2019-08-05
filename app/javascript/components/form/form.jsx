@@ -36,11 +36,14 @@ class Form extends React.Component {
   handleFormSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
 
-    console.log("Question 1:", this.state.selectedOption1);
-    console.log("Question 2:", this.state.selectedOption2);
-    console.log("Question 3:", this.state.selectedOption3);
-    console.log("Question 4:", this.state.selectedOption4);
-    console.log("Question 5:", this.state.selectedOption5);
+    var savedAnswers = [
+      this.state.selectedOption1,
+      this.state.selectedOption2,
+      this.state.selectedOption3,
+      this.state.selectedOption4,
+      this.state.selectedOption5
+    ]
+    this.props.onQuizSubmit(savedAnswers);
   };
 
   render() {
